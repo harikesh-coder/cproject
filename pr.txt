@@ -184,6 +184,8 @@ void del(int id)
 	     { fwrite(&prodct,sizeof(prodct),1,temp);
 	     }
      }
+     fclose(file);
+     fclose(temp);
      remove("store.txt");
      rename("temp.txt","store.txt");     
 }
